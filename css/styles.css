@@ -150,11 +150,11 @@ body {
   }
   .accordion li img {
     position: unset;
-    height: auto;
     translate: unset;
+    height: auto;
   }
   .accordion li {
-    flex-basis: 240px;
+    flex-basis: 300px;
   }
   .accordion li .content,
   .accordion li .content span,
@@ -163,12 +163,15 @@ body {
     visibility: visible;
   }
   .accordion li .content span {
-    left: 1rem;
+    bottom: 20px;
     border: 1rem;
-    translate: unset;
   }
 }
-
+@media screen and (max-width: 480px) {
+  .accordion li img {
+    height: 100%;
+  }
+}
 /* parallex */
 .parallax-container {
   background-image: url("../images/subscribe/parallex.png");
