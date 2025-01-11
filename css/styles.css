@@ -167,7 +167,7 @@ body {
     border: 1rem;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
   .accordion li img {
     height: 100%;
   }
@@ -197,4 +197,14 @@ body {
 /* footer */
 footer ul li:hover a {
   transition: 0.3s;
+}
+/* Scrollbar */
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #9f9f9f;
+  border-radius: 10px;
 }

@@ -48,15 +48,47 @@ tabButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const targetTab = button.getAttribute('data-tab');
 
-        // Remove active state from all buttons 
+        // Remove active state from all buttons
         tabButtons.forEach((btn) => {
-            btn.classList.remove("bg-[--color-red]"),
-                btn.classList.add("text-[--color-secondary]", "bg-[--custom-white]")
+            btn.classList.remove("bg-[--color-red]", "hover:bg-[--color-red]", "text-white");
+            btn.classList.add("text-[--color-secondary]", "bg-[--custom-white]", "hover:bg-[--custom-white]");
         });
+
+        // Add active state to the clicked button
+        button.classList.add("bg-[--color-red]", "text-white", "hover:bg-[--color-red]");
+        button.classList.remove("text-[--color-secondary]", "bg-[--custom-white]");
+
+        // Hide all tab contents and show the targeted one
         tabContents.forEach((content) => content.classList.add('hidden'));
         document.getElementById(targetTab).classList.remove('hidden');
     });
 });
+
+// for videos
+const tabList = document.querySelectorAll('.tab-list');
+const tabvidoes = document.querySelectorAll('.tab-video');
+
+// Add click event listener to each button
+tabList.forEach((button) => {
+    button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+
+        // Remove active state from all buttons
+        tabList.forEach((btn) => {
+            btn.classList.remove("bg-[--color-red]", "hover:bg-[--color-red]", "text-white");
+            btn.classList.add("text-[--color-secondary]", "bg-[--custom-white]", "hover:bg-[--custom-white]");
+        });
+
+        // Add active state to the clicked button
+        button.classList.add("bg-[--color-red]", "text-white", "hover:bg-[--color-red]");
+        button.classList.remove("text-[--color-secondary]", "bg-[--custom-white]");
+
+        // Hide all tab contents and show the targeted one
+        tabvidoes.forEach((content) => content.classList.add('hidden'));
+        document.getElementById(targetTab).classList.remove('hidden');
+    });
+});
+
 
 
 // Instructors
@@ -79,3 +111,9 @@ instructors.forEach((button) => {
 
 
 });
+
+// video
+const myVideo = document.getElementById("myVideo")
+myVideo.addEventListener("click", () => {
+    myVideo.controls = true
+})

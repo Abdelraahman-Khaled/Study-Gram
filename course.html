@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Gram</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/0b655d17e3.js" crossorigin="anonymous"></script>
+
+    <!-- Css sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- start Nav -->
+    <header class="bg-white">
+        <nav class="flex container items-center justify-between  lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="images/logo/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button id="open" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <div class="relative">
+                    <button type="button" id="categories"
+                        class="flex items-center gap-x-1 text-sm/6 font-semibold hover:text-[#248888] transition duration-300 "
+                        aria-expanded="false">
+                        Categories
+                        <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd"
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="menu"
+                        class="absolute hidden -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                        <div class="p-4">
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="size-6 text-gray-600 group-hover:text-[#248888] " fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                                        data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#"
+                                        class="block font-semibold hover:text-[#248888]  transition duration-300">
+                                        Analytics
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="size-6 text-gray-600 group-hover:text-[#248888]  transition duration-300"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#"
+                                        class="block font-semibold hover:text-[#248888]  transition duration-300">
+                                        Engagement
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Speak directly to your customers</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="size-6 text-gray-600 group-hover:text-[#248888] transition duration-300 "
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#"
+                                        class="block font-semibold hover:text-[#248888] transition duration-300">
+                                        Security
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Your customers’ data will be safe and secure</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="size-6 text-gray-600 group-hover:text-[#248888] transition duration-300"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#"
+                                        class="block font-semibold hover:text-[#248888] transition duration-300">
+                                        Integrations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Connect with third-party tools</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                                <div
+                                    class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                    <svg class="size-6 text-gray-600 group-hover:text-[#248888] transition duration-300"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        aria-hidden="true" data-slot="icon">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                    </svg>
+                                </div>
+                                <div class="flex-auto">
+                                    <a href="#"
+                                        class="block font-semibold hover:text-[#248888] transition duration-300">
+                                        Automations
+                                        <span class="absolute inset-0"></span>
+                                    </a>
+                                    <p class="mt-1 text-gray-600">Build strategic funnels that will convert</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#" class="text-sm/6 font-semibold hover:text-[#248888] transition duration-300">All courses</a>
+                <a href="#" class="text-sm/6 font-semibold hover:text-[#248888] transition duration-300">Download
+                    App</a>
+                <a href="#" class="text-sm/6 font-semibold hover:text-[#248888] transition duration-300">Become an
+                    instructor</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
+                <a href="#"
+                    class="text-sm/6 font-semibold bg-[#248888] hover:bg-[#1b6666] transition duration-300 text-white py-2 px-4 rounded  ">Log
+                    in
+                    <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div id="mobileMenu" class="lg:hidden hidden transition duration-300" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-10"></div>
+            <div
+                class="fixed  inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="images/logo/logo.png" alt="log">
+                    </a>
+                    <button id="close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <div class="-mx-3">
+                                <button id="categoriesMobile" type="button"
+                                    class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300"
+                                    aria-controls="disclosure-1" aria-expanded="false">
+                                    Categories
+                                    <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                                    <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor"
+                                        aria-hidden="true" data-slot="icon">
+                                        <path fill-rule="evenodd"
+                                            d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                                <div class="mt-2 hidden space-y-2 transition duration-300" id="disclosure-1">
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Analytics</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Engagement</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Security</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Integrations</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Automations</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Watch
+                                        demo</a>
+                                    <a href="#"
+                                        class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Contact
+                                        sales</a>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">All
+                                courses</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Download
+                                App</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50 hover:text-[#248888] transition duration-300">Become
+                                an instructor</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold  hover:bg-gray-50">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 lg:flex lg:gap-8 flex-col">
+        <!-- Video and Tabs -->
+        <!-- Video Section -->
+        <div class="sm:grid gap-6 lg:grid-cols-[2fr_1fr]  bg-[#efebf5]  p-8 rounded-2xl">
+            <section class="  overflow-hidden ">
+                <div class=" mx-auto px-6 py-4">
+                    <div class="text-sm">
+                        <a href="#" class="text-gray-500">Home |</a>
+                        <a href="#" class="text-gray-500">Courses |</a>
+                        <span class="text-[#248888] font-semibold">Course Details</span>
+                    </div>
+                </div>
+                <video class="ms:h-[30rem]  rounded-xl" id="myVideo" poster="images/video/video-poster.png">
+                    <source src="video/Education of School Intro Video for No Copyright free download.mp4"
+                        type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="p-4">
+                    <h2 class="text-xl font-bold">Maths - for Standard 3 Students | Episode 2</h2>
+                </div>
+            </section>
+            <!-- aside -->
+            <section>
+                <div class=" rounded-lg  p-4">
+                    <h3 class="text-lg font-bold">Course Playlists</h3>
+                    <div class="flex items-center justify-around mt-4">
+                        <button class=" border-b-2 border-[#e7475e]   ">Videos</button>
+                        <button class="opacity-30">Booklets</button>
+                        <button class="opacity-30">Quizzes</button>
+                    </div>
+                    <!-- buttons -->
+                    <div class="flex p-2 my-2 rounded-xl gap-1 bg-white">
+                        <button class="tab-list btn-primary m-0 w-1/2 bg-[--color-red] "
+                            data-tab="Explanation">Explanation</button>
+                        <button
+                            class="tab-list btn-primary m-0 w-1/2 hover:bg-[--custom-white] text-current bg-[--custom-white]"
+                            data-tab="Revision">Revision</button>
+                    </div>
+                    <!-- videos -->
+                    <div class="mt-4 max-h-96 overflow-y-scroll custom-scroll pr-4 tab-video" id="Explanation">
+                        <ul class=" space-y-4">
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/video-content2.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden mt-4 max-h-96 overflow-y-scroll custom-scroll pr-4 tab-video" id="Revision">
+                        <ul class=" space-y-4">
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center space-x-4 rounded-xl gap-1 bg-white p-2">
+                                <img src="images/video/vide-content.png" alt="Thumbnail" class=" h-16 rounded-md">
+                                <div>
+                                    <p class="text-gray-600 font-bold">Maths - for Standard 3 St...</p>
+                                    <p class="text-sm text-gray-400">543 views</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+        <!-- Tabs -->
+        <section class="grid grid-cols-1  lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[2fr_1fr] gap-5 my-4">
+            <!-- left-section Details-->
+            <div>
+                <div class="flex flex-wrap  gap-4 mb-6">
+                    <button
+                        class="tab-button py-3 px-6 bg-[--color-red]  font-medium rounded-lg  text-white  focus:bg-[--color-red]  focus:text-white transition-all duration-300"
+                        data-tab="instructor">
+                        Instructor
+                    </button>
+                    <button
+                        class="tab-button py-3 px-6 bg-[--custom-white]  font-medium rounded-lg    focus:bg-[--color-red]  focus:text-white hover:bg-gray-200 transition-all duration-300"
+                        data-tab="overview">
+                        Overview
+                    </button>
+                    <button
+                        class="tab-button py-3 px-6 bg-[--custom-white]  font-medium rounded-lg    focus:bg-[--color-red]  focus:text-white hover:bg-gray-200 transition-all duration-300"
+                        data-tab="reviews">
+                        Reviews
+                    </button>
+                </div>
+                <!-- Tab Content -->
+                <div id="instructor" class="tab-content">
+                    <div class="mt-6">
+                        <h3 class="text-lg font-bold">Instructor</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan.
+                        </p>
+                        <h3 class="text-lg font-bold mt-6">Certification</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">Who this course is for</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">What you'll learn in this course</h3>
+                        <ul class="list-inside space-y-2 mt-2 text-gray-600">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Lorem ipsum dolor
+                                sit amet</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="overview" class="tab-content hidden">
+                    <div class="mt-6">
+                        <h3 class="text-lg font-bold">Overview</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan.
+                        </p>
+                        <h3 class="text-lg font-bold mt-6">Certification</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">Who this course is for</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">What you'll learn in this course</h3>
+                        <ul class="list-inside space-y-2 mt-2 text-gray-600">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Lorem ipsum dolor
+                                sit amet</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="reviews" class="tab-content hidden">
+                    <!-- info -->
+                    <div class="mt-6">
+                        <h3 class="text-lg font-bold">Reviews</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan.
+                        </p>
+                        <h3 class="text-lg font-bold mt-6">Certification</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">Who this course is for</h3>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas
+                            accumsan lacus vel facilisis consectetur adipiscing elit. </p>
+                        <h3 class="text-lg font-bold mt-6">What you'll learn in this course</h3>
+                        <ul class="list-inside space-y-2 mt-2 text-gray-600">
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Lorem ipsum dolor
+                                sit amet</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="w-3 h-3 rounded-full bg-[--color-red] inline-block"></span>Consectetur
+                                adipiscing elit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- right-section Info -->
+            <div class="bg-white rounded-2xl shadow-md md:m-0 mt-6 p-8 h-fit">
+                <h3 class="text-lg font-bold">Course Info</h3>
+                <p class="flex justify-between mt-4">Price: <span class=" text-[#ff5e5e]">$49.00</span></p>
+                <p class="flex justify-between mt-2">Instructor: <span class="text-[#0f0b4c]">Mostafa Ali</span></p>
+                <p class="flex justify-between mt-2">Ratings:
+                    <span class="flex py-2 gap-1 items-center">
+                        <span><img src="images/card/star.png" alt="star"></span>
+                        <span><img src="images/card/star.png" alt="star"></span>
+                        <span><img src="images/card/star.png" alt="star"></span>
+                        <span><img src="images/card/star.png" alt="star"></span>
+                        <span><img src="images/card/disabled-star.png" alt="dark-star"></span>
+                    </span>
+                </p>
+                <p class="flex justify-between mt-2">Duration: <span>3 Days</span></p>
+                <p class="flex justify-between mt-2">Lessons: <span>30</span></p>
+                <p class="flex justify-between mt-2">Quizzes: <span>5</span></p>
+                <p class="flex justify-between mt-2">Language: <span>English</span></p>
+                <p class="flex justify-between mt-2">Access: <span>Lifetime</span></p>
+                <button
+                    class="w-full mt-4 px-4 py-3 bg-[#248888] hover:bg-[#1b6666] transition duration-300 text-white rounded-md">Purchase
+                    Course</button>
+            </div>
+        </section>
+    </div>
+    <!-- Similar Section -->
+    <section class="bg-white py-8 px-6">
+        <div class="container mx-auto">
+            <!-- Section Title -->
+            <h2 class="text-xl font-bold text-[#0f0b4c] mb-6">Similar Courses</h2>
+
+            <!-- Courses Grid -->
+            <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 justify-center grid-cols-[min-content]">
+                <!-- card 1  -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 w-72 sm:w-auto">
+                    <img src="images/card/card5.png" alt="Course Image" class=" sm:w-52 rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl font-bold text-[#0f0b4c]">The Three Musketeers</h3>
+                        <div class="flex items-center  mt-1">
+                            <span class="flex py-2 gap-1 items-center">
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/disabled-star.png" alt="dark-star"></span>
+                                <span class="text-sm text-gray-500 ml-2">(50)</span>
+                            </span>
+                        </div>
+                        <!-- price -->
+                        <div class="flex flex-row justify-between items-center">
+                            <p class="text-[#ff5e5e] font-bold text-lg mt-2">$40.00</p>
+                            <button class="max-w-fit h-full flex flex-col items-center justify-end ">
+                                <i
+                                    class="fa-solid fa-money-bill bg-[--custom-white] text-[--color-primary] p-2 rounded-full shadow-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2  -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 w-72 sm:w-auto">
+                    <img src="images/card/card5.png" alt="Course Image" class=" sm:w-52 rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl font-bold text-[#0f0b4c]">The Three Musketeers</h3>
+                        <div class="flex items-center  mt-1">
+                            <span class="flex py-2 gap-1 items-center">
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/disabled-star.png" alt="dark-star"></span>
+                                <span class="text-sm text-gray-500 ml-2">(50)</span>
+                            </span>
+                        </div>
+                        <!-- price -->
+                        <div class="flex flex-row justify-between items-center">
+                            <p class="text-[#ff5e5e] font-bold text-lg mt-2">$40.00</p>
+                            <button class="max-w-fit h-full flex flex-col items-center justify-end ">
+                                <i
+                                    class="fa-solid fa-money-bill bg-[--custom-white] text-[--color-primary] p-2 rounded-full shadow-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3  -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 w-72 sm:w-auto">
+                    <img src="images/card/card5.png" alt="Course Image" class=" sm:w-52 rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl font-bold text-[#0f0b4c]">The Three Musketeers</h3>
+                        <div class="flex items-center  mt-1">
+                            <span class="flex py-2 gap-1 items-center">
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/disabled-star.png" alt="dark-star"></span>
+                                <span class="text-sm text-gray-500 ml-2">(50)</span>
+                            </span>
+                        </div>
+                        <!-- price -->
+                        <div class="flex flex-row justify-between items-center">
+                            <p class="text-[#ff5e5e] font-bold text-lg mt-2">$40.00</p>
+                            <button class="max-w-fit h-full flex flex-col items-center justify-end ">
+                                <i
+                                    class="fa-solid fa-money-bill bg-[--custom-white] text-[--color-primary] p-2 rounded-full shadow-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4  -->
+                <div
+                    class="bg-white shadow-lg rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 w-72 sm:w-auto">
+                    <img src="images/card/card5.png" alt="Course Image" class=" sm:w-52 rounded-lg">
+                    <div class="flex-1">
+                        <h3 class="text-lg sm:text-xl font-bold text-[#0f0b4c]">The Three Musketeers</h3>
+                        <div class="flex items-center  mt-1">
+                            <span class="flex py-2 gap-1 items-center">
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/star.png" alt="star"></span>
+                                <span><img src="images/card/disabled-star.png" alt="dark-star"></span>
+                                <span class="text-sm text-gray-500 ml-2">(50)</span>
+                            </span>
+                        </div>
+                        <!-- price -->
+                        <div class="flex flex-row justify-between items-center">
+                            <p class="text-[#ff5e5e] font-bold text-lg mt-2">$40.00</p>
+                            <button class="max-w-fit h-full flex flex-col items-center justify-end ">
+                                <i
+                                    class="fa-solid fa-money-bill bg-[--custom-white] text-[--color-primary] p-2 rounded-full shadow-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Add additional cards -->
+            </div>
+        </div>
+    </section>
+
+    <!--Start Footer -->
+    <footer class="bg-[#f9f9ff] ">
+        <div class="container mx-auto py-16 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Logo and Description -->
+            <div>
+                <div>
+                    <img src="images/logo/footer-logo.png" alt="logo">
+                </div>
+                <p class="text-gray-600 mt-4">
+                    At Study Box, we're all learners and instructors. We live out our values every day to create a
+                    culture
+                    that is diverse, inclusive, and committed to helping employees thrive.
+                </p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#">
+                        <img src="images/footer/app_google.png" alt="Google Play" />
+                    </a>
+                    <a href="#">
+                        <img src="images/footer/apple-store.png" alt="App Store" />
+                    </a>
+                </div>
+            </div>
+            <!-- Latest Categories -->
+            <div>
+                <h3 class="text-lg font-semibold  mb-4">Latest categories</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class=" hover:text-[#248888]">Classroom courses</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Mastering Data Structures</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">E-learning courses</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">The Complete Web Dev</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Video Courses</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Offline Courses</a></li>
+                </ul>
+            </div>
+            <!-- Latest Courses -->
+            <div>
+                <h3 class="text-lg font-semibold  mb-4">Latest Courses</h3>
+                <ul class="space-y-2 ">
+                    <li><a href="#" class=" hover:text-[#248888]">About Us</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Contact Us</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Privacy Policy</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Become an Instructor</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Terms and Conditions</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Get The App</a></li>
+                </ul>
+            </div>
+            <!-- Company -->
+            <div>
+                <h3 class="text-lg font-semibold  mb-4">Company</h3>
+                <ul class="space-y-2 ">
+                    <li><a href="#" class=" hover:text-[#248888]">About Us</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Contact Us</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Privacy Policy</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Become an Instructor</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Terms and Conditions</a></li>
+                    <li><a href="#" class=" hover:text-[#248888]">Get The App</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div
+            class=" mx-auto  px-4 flex sm:flex-row flex-col gap-3 sm:gap-0 justify-around  items-center py-4 bg-white ">
+            <p class="text-gray-500">
+                © 2024 <span class="font-bold text-[--color-secondary]">Study Box</span> | Powered by <span
+                    class="text-[--color-secondary]"> Bold Brand</span>
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-[#0866ff] transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#fd09db] transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#24a3f1] transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#2e9ad1] transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
