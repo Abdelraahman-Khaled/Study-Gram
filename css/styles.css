@@ -28,6 +28,7 @@ body {
 .red {
   color: var(--color-red);
 }
+/* primary btn */
 .btn-primary {
   background-color: var(--color-primary);
   color: white;

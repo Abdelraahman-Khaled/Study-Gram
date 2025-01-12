@@ -75,12 +75,12 @@ tabList.forEach((button) => {
 
         // Remove active state from all buttons
         tabList.forEach((btn) => {
-            btn.classList.remove("bg-[--color-red]", "hover:bg-[--color-red]", "text-white");
+            btn.classList.remove("bg-[--color-red]", "hover:bg-[--color-red]", "text-white", "hover:!bg-[--color-red]");
             btn.classList.add("text-[--color-secondary]", "bg-[--custom-white]", "hover:bg-[--custom-white]");
         });
 
         // Add active state to the clicked button
-        button.classList.add("bg-[--color-red]", "text-white", "hover:bg-[--color-red]");
+        button.classList.add("bg-[--color-red]", "text-white", "hover:!bg-[--color-red]");
         button.classList.remove("text-[--color-secondary]", "bg-[--custom-white]");
 
         // Hide all tab contents and show the targeted one
